@@ -1,0 +1,27 @@
+<div class="columns">
+  <h1 class="title is-1">Weather API - <%= @weather.city %></h1>
+</div>
+
+<div class="box">
+  <article class="media">
+    <div class="media-left">
+      <figure class="image is-64x64">
+        <% if @weather.icon? %>
+          <img src="<%= @weather.icon_url %>" alt="weather icon">
+        <% else %>
+          <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+        <% end %>
+      </figure>
+    </div>
+
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <strong><%= @weather.weather %></strong> <small><%= @weather.min_max %></small> <small><%= @weather.time.to_i %>m</small>
+          <br>
+          <%= @weather.description %>
+        </p>
+      </div>
+    </div>
+  </article>
+</div>

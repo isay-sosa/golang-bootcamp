@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Inscriptions</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+</head>
+
+<body>
+
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <h1 class="title">Golang Bootcamp</h1>
+    </a>
+  </div>
+
+  <div class="navbar-menu">
+    <div class="navbar-end">
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Isay Sosa
+        </a>
+
+        <div class="navbar-dropdown is-right">
+          <a class="navbar-item" href="https://github.com/iszandro" target="_blank">Github</a>
+          <a class="navbar-item" href="https://www.linkedin.com/in/iszandro/" target="_blank">Linkedin</a>
+          <a class="navbar-item" href="https://github.com/iszandro/golang-bootcamp" target="_blank">Repository</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <aside class="column menu is-3">
+        <p class="menu-label">
+          General
+        </p>
+
+        <ul class="menu-list">
+          <li class="column">
+            <a href="/hello-world" class="<%= @active_item == :hello_world && 'is-active' || '' %>">Hello World</a>
+          </li>
+
+          <li class="column">
+            <a href="/weather" class="<%= @active_item == :weather && 'is-active' || '' %>">Weather API</a>
+          </li>
+        </ul>
+      </aside>
+
+      <div class="column is-8 is-offset-1">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
